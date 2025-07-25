@@ -1,2 +1,2 @@
-# coursera-test
-coursera test repo
+# link to the site
+link: https://najwrld.github.io/crisskat/site/

@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Hello Wrld
-        </title>
-    </head>
-    <body>
-        <h1>Hello Wrld</h1>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Portfolio</title>
+  <!-- Google Fonts link -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: 'Fira Code', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 15rem;
+      white-space: nowrap;
+      border-right: 4px solid #000;
+      overflow: hidden;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 15px 50px;
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #000;
+      font-family: 'Fira Code', monospace;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 1px;
+      border-radius: 0;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #fff;
+      color: #000;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="hello"></h1>
+  <a href="links.html" class="button">Welcome</a>
+
+  <script>
+    const text = 'Hello WRLD!';
+    const speed = 300;
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("hello").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        document.getElementById("hello").style.borderRight = 'none';
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
 </html>
